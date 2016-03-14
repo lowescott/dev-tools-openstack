@@ -1,0 +1,24 @@
+{
+  "variables": {
+    "os_password": ""
+  },
+  "builders": [{
+      "type": "openstack",
+      "username": "demo-user",
+      "password": "{{user `os_password`}}",
+      "identity_endpoint": "https://prme-haas-vio-dashboard.eng.vmware.com:5000/v2.0",
+      "ssh_username": "ubuntu",
+      "tenant_name": "demo-project",
+      "region": "nova",
+      "image_name": "Packer Test Image",
+      "source_image": "83854473-9603-44d4-a632-396871999c9b",
+      "flavor": "2",
+      "networks": ["3899d460-eaa1-4feb-a80b-9e9c003be7f5"],
+      "floating_ip_pool": "EXTNET",
+      "insecure": "false"
+   }],
+  "post-processors": [{
+      "type": "shell-local",
+      "inline": ["echo test"]
+   }]
+}
