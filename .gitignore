@@ -1,2 +1,4 @@
 openrc
 .vagrant/
+*.tfstate
+*.tfstate.backup
