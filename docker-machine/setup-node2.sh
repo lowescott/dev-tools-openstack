@@ -5,12 +5,14 @@
 # OS_PASSWORD = Specifies the password for authentication
 # OS_TENANT_NAME = Specifies the name of the tenant Docker Machine will use
 
+# Define the Swarm token (must be re-generated every time this is re-run)
+SWARM_TOKEN="4e1871e4f52b7fc649a0684c7a14e312"
+
 # Define some values used later
 OS_IMAGE_ID="eed0ae16-948a-4930-97ab-f7ba128385a8"
 OS_NETWORK_NAME="lab-net-5"
 OS_SSH_USER="ubuntu"
 OS_FLOATINGIP_POOL="ext-net-5"
-SWARM_TOKEN="4b923bdad5cd82127975936e2c846537"
 
 # Create the node-02 instance
 docker-machine create -d openstack \
