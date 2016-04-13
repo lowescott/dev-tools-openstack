@@ -2,6 +2,11 @@
   "variables": {
     "os_password": ""
   },
+  "provisioners": [{
+      "type": "ansible",
+      "playbook_file": "src/apache.yaml",
+      "user": "ubuntu" 
+  }],
   "builders": [{
       "type": "openstack",
       "username": "demo-user",
@@ -10,15 +15,11 @@
       "ssh_username": "ubuntu",
       "tenant_name": "demo-project",
       "region": "nova",
-      "image_name": "Packer Test Image",
+      "image_name": "web-image-packer",
       "source_image": "83854473-9603-44d4-a632-396871999c9b",
       "flavor": "2",
       "networks": ["3899d460-eaa1-4feb-a80b-9e9c003be7f5"],
       "floating_ip_pool": "EXTNET",
       "insecure": "false"
-   }],
-  "post-processors": [{
-      "type": "shell-local",
-      "inline": ["echo test"]
-   }]
+  }]
 }
