@@ -1,12 +1,9 @@
 ---
 - hosts: all
-  sudo: yes
+  remote_user: ubuntu
+  become: yes
   tasks:
     - name: install apache2
       apt: name=apache2 update_cache=yes state=latest
     - name: install git
       apt: name=git update_cache=yes state=latest
-    - name: remove original web content
-      command: rm -rf /var/www
-    - name: initialize Web Server content
-      git: repo=https://github.com/VMTrooper/web-example.git dest=/var/www/html

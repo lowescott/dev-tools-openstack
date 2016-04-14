@@ -3,3 +3,4 @@ openrc
 *.tfstate
 *.tfstate.backup
 .DS_Store
+*.retry

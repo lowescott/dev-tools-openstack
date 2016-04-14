@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: remove original web content
+      file: path=/var/www state=absent
+    - name: initialize Web Server content
+      git: repo=https://github.com/VMTrooper/web-example.git dest=/var/www/html
