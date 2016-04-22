@@ -1,9 +1,3 @@
-# Create a new anti-affinity server group for the Swarm cluster
-resource "openstack_compute_servergroup_v2" "swarm" {
-	name = "swarm"
-	policies = ["anti-affinity"]
-}
-
 # Create a new tenant network for the Swarm cluster
 resource "openstack_networking_network_v2" "swarm-net" {
 	name = "swarm-net"
