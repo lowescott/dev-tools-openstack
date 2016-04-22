@@ -21,9 +21,10 @@ Vagrant.configure("2") do |config|
           os.flavor = /m1.small/
         end             # Regex or String
         os.image        = /web-image-packer/                 # Regex or String
-        os.keypair_name = "demo-keypair"      # as stored in Nova
+        os.keypair_name = "trobertsjr-keypair"      # as stored in Nova
         os.ssh_username = "ubuntu"           # login for the VM
-        os.networks = ["demo-network"]
+        os.networks = ["demo-net"]
+        os.security_groups = ["default", "basic-services"]
         os.floating_ip = :auto
         os.floating_ip_pool = "EXTNET"
       end

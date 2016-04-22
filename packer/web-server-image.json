@@ -8,16 +8,17 @@
   }],
   "builders": [{
       "type": "openstack",
-      "username": "demo-user",
+      "username": "trobertsjr",
       "password": "{{user `os_password`}}",
       "identity_endpoint": "https://prme-haas-vio-dashboard.eng.vmware.com:5000/v2.0",
       "ssh_username": "ubuntu",
-      "tenant_name": "demo-project",
+      "tenant_name": "summit-2016",
       "region": "nova",
       "image_name": "web-image-packer",
-      "source_image": "83854473-9603-44d4-a632-396871999c9b",
+      "source_image": "b3bb3f83-93b7-4965-a47d-8101255933e7",
       "flavor": "2",
-      "networks": ["3899d460-eaa1-4feb-a80b-9e9c003be7f5"],
+      "networks": ["c809dbcc-df96-4389-9794-4df100a0545f"],
+      "security_groups": ["default", "basic-services"],
       "floating_ip_pool": "EXTNET",
       "insecure": "false"
   }]
