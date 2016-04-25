@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set these IP addresses after running Terraform
-NODE_01='172.16.5.149'
-NODE_02='172.16.5.152'
-NODE_03='172.16.5.150'
-NODE_04='172.16.5.151'
-NODE_05='172.16.5.153'
+NODE_01='172.16.5.169'
+NODE_02='172.16.5.167'
+NODE_03='172.16.5.168'
+NODE_04='172.16.5.165'
+NODE_05='172.16.5.166'
 
 # Set API endpoints based on node IP addresses
 N01_ETCD="$NODE_01:2379"

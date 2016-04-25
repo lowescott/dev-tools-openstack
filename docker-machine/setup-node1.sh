@@ -6,13 +6,13 @@
 # OS_TENANT_NAME = Specifies the name of the tenant Docker Machine will use
 
 # Define the Swarm token (must be re-generated every time this is re-run)
-SWARM_TOKEN="2cc829e6dc46e3217e53b4b4ee721b46"
+SWARM_TOKEN="593313abdb6a669f7e84892b8c4d7a84"
 
 # Define some values used later
-OS_IMAGE_ID="83854473-9603-44d4-a632-396871999c9b"
+OS_IMAGE_ID="eed0ae16-948a-4930-97ab-f7ba128385a8"
 OS_NETWORK_NAME="demo-net"
 OS_SSH_USER="ubuntu"
-OS_FLOATINGIP_POOL="EXTNET"
+OS_FLOATINGIP_POOL="ext-net-5"
 
 # Create the node-01 instance
 docker-machine create -d openstack \
