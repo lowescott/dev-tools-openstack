@@ -2,5 +2,4 @@ openrc
 .vagrant/
 *.tfstate
 *.tfstate.backup
-.DS_Store
 *.retry
